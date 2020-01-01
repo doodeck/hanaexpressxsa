@@ -134,7 +134,7 @@ checkEnv() {
 ############################################################################################
 waitCockpitAppsStarted() {
 	echo "Check/Wait for Cockpit app to start..."
-	xs wait-for-apps --timeout 3600 --apps "cockpit-adminui-svc,cockpit-admin-web-app,cockpit-hdb-svc,cockpit-persistence-svc,cockpit-collection-svc,cockpit-telemetry-svc,cockpit-xsa-svc"
+	xs wait-for-apps --timeout 13600 --apps "cockpit-adminui-svc,cockpit-admin-web-app,cockpit-hdb-svc,cockpit-persistence-svc,cockpit-collection-svc,cockpit-telemetry-svc,cockpit-xsa-svc"
 	if [ $? -ne 0 ]; then
 		echo
 		echo "Please start required Cockpit apps and rerun ${base_name}."
